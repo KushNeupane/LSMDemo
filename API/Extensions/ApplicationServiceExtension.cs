@@ -13,6 +13,7 @@ namespace API.Extensions
          public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<ISearchService, SearchService>();
+            services.AddScoped<IWeightRules, BuildingWeightService>();
             return services;
         }        
     }

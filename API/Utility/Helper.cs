@@ -1,8 +1,7 @@
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using API.Enums;
-using Newtonsoft.Json.Linq;
 
 namespace API.Utility
 {
@@ -76,12 +75,6 @@ namespace API.Utility
             searchFields.Add("media.description", 6);
 
             return searchFields;
-        }
-
-        public static SearchTypeEnum GetSearchType(string SearchText, Dictionary<string, object> SearchedList)
-        {
-            return SearchTypeEnum.ExactSearch;
-
         }
     }
 }

@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using API.Utility;
+using BenchmarkDotNet.Running;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace API
 {
@@ -13,6 +9,7 @@ namespace API
     {
         public static void Main(string[] args)
         {
+            BenchmarkRunner.Run<SearchBenchMark>();
             CreateHostBuilder(args).Build().Run();
         }
 
